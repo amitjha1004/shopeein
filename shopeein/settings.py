@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#$alb01u5mnni=(jr8_c@r7z!9*r3k)z$9!j1as*)9g&l(^5gf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'shopeein.herokuapp.com']
 
@@ -76,17 +76,17 @@ WSGI_APPLICATION = 'shopeein.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
     # 'default': {
-    #         'ENGINE': 'django.db.backends.postgresql',
-    #         'NAME': 'postgres',
-    #         'USER': 'postgres',
-    #         'PASSWORD': 'test123@',
-    #         'HOST': 'localhost'
-    #     }
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+    'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'postgres',
+            'USER': 'postgres',
+            'PASSWORD': 'test123@',
+            'HOST': 'localhost'
+        }
 }
 
 
